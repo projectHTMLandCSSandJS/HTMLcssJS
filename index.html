@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Спортивное питание</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div id="logo" onclick="slowScroll('#top')">
+      <span>SportISlife</span>
+    </div>
+    <div id="about">
+      <a href="#" title="Возможности" onclick="slowScroll('#main')">Возможности</a>
+      <a href="#" onclick="slowScroll('#overview')" title="Преимущества">Преимущества</a>
+      <a href="#" onclick="slowScroll('#contacts')" title="Контакты">Контакты</a>
+
+    </div>
+  </header>
+
+  <div id="top">
+    <h1>Вы - это то, чем вы питаетесь!</h1>
+    <h3>Питайтесь спортивно - и Вы спортсмен!!!</h3>
+  </div>
+
+  <div id="main" class="conteiner">
+    <div class="intro">
+      <h2>Наши услуги помогут вам!</h2>
+      <span>Большой выбор всего, что может помочь вам</span>
+    </div>
+    <div class="text">
+      <span>Вы можете найти СпротПит на любой вкус</span>
+    </div>
+  </div>
+
+  <div id="overview" class="conteiner">
+    <h2>Преимущества</h2>
+    <h4>с нами вам будет проще</h4>
+
+    <div class="img">
+      <img src="https://sportivnoepitanie.ru/img/all/protein.jpg" alt="">
+      <span>Протеин</span>
+    </div>
+    <div class="img">
+      <img src="http://gejner.com/wp-content/uploads/2015/best-2015.jpg" alt="">
+      <span>Гейнер</span>
+    </div>
+  </div>
+
+  <div id="contacts" class="conteiner">
+    <center><h5>Обратная связь</h5></center>
+    <form id="form_input">
+      <label for="name">Имя <span>*</span></label><br>
+      <input type="text" placeholder="Введите имя" name="name" id="name"><br>
+      <label for="email">Ваша почта <span>*</span></label><br>
+			<input type="email" placeholder="Введите email" name="email" id="email"><br>
+			<label for="message">Сообщение <span>*</span></label><br>
+			<textarea placeholder="Введите ваше сообщение" name="message" id="message"></textarea><br>
+
+    </form>
+  </div>
+
+  <div id="faq">
+
+
+    <div class="conteiner">
+      <span class="title">Гарантии:</span><br>
+      <p>Большой опыт работы </p>
+      <p>Доставка лучшего спортивного питания быстро!</p>
+      <p>Отзывы наших довольных клиентов!</p>
+
+
+    </div>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    function slowScroll(id) {
+      $('html, body').animate({
+        scrollTop: $(id).offset().top
+      }, 500);
+    }
+
+    $(document).on("scroll", function () {
+      if($(window).scrollTop() === 0)
+        $("header").removeClass("fixed");
+      else
+        $("header").attr("class", "fixed");
+    });
+  </script>
+</body>
+</html>
